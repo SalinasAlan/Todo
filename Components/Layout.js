@@ -1,9 +1,7 @@
-const Layout = ({children}) => {
-    return(
-        <div>
-            {children}
-        </div>
-    );
-}
+import styled from 'styled-components';
 
-export default Layout;
+export const Layout = styled.div`
+    width: 100%;
+    height: 100%;
+    background: #010A20;
+`;
