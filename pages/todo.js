@@ -1,13 +1,19 @@
-import {TodoProvider} from '../Context/Todo';
+import { TodoProvider } from '../Context/Todo';
 import TodoList from '../Components/Todo/TodoList';
 import TodoInput from '../Components/Todo/TodoInput';
+import { Layout } from '../Components/Layout';
+import { Container } from '../styles/Containers/Container'
 
 const Todo = () => {
-    return(
-        <TodoProvider>
-            <TodoInput />
-            <TodoList />
-        </TodoProvider>
+    return (
+        <Layout>
+            <TodoProvider>
+                <Container>
+                    <TodoInput />
+                    <TodoList />
+                </Container>
+            </TodoProvider>
+        </Layout>
     );
 };
 
