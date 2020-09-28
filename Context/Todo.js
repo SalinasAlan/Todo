@@ -1,4 +1,5 @@
 import { useState, useContext } from 'react';
+import { v4 } from 'uuid';
 
 const TodoContext = React.createContext();
 
@@ -12,6 +13,7 @@ export const TodoProvider = ({ children }) => {
         setTasks([
             ...tasks,
             {
+                id: v4(),
                 task,
                 complete: false
             }
@@ -22,10 +24,10 @@ export const TodoProvider = ({ children }) => {
         setTasks(tasks.map(t => t.id === id ? { ...t, complete: status } : t))
     }
 
-    const handleDeteleTask = (taskDeleted) => {
+    const handleDeteleTask = (idDeleted) => {
         setTasks(
             tasks.filter(task => {
-                return task.task != taskDeleted;
+                return task.id != idDeleted;
             })
         )
     }
