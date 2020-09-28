@@ -1,5 +1,6 @@
 import { useTasks } from '../../Context/Todo';
-import Task from '../Task';
+import Task from '../Task/Task';
+import { ListContainer } from '../../styles/Containers/Container';
 
 const TodoList = () => {
 
@@ -7,14 +8,13 @@ const TodoList = () => {
 
     return (
         <>
-            <div>
-                <h1>Tasks</h1>
+            <ListContainer>
                 {
-                    tasks.map((task, index) => (
-                        <Task key={index} {...task} />
+                    tasks.map((task, id) => (
+                        <Task key={id} {...task} />
                     ))
                 }
-            </div>
+            </ListContainer>
         </>
     )
 }
