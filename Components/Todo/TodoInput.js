@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTasks } from '../../Context/Todo';
+import { Input, ButtonAdd } from './InputStyle';
 
 const TodoInput = () => {
 
@@ -15,16 +16,16 @@ const TodoInput = () => {
     return (
         <>
             <form onSubmit={handleSubmit} >
-                <input
+                <Input
                     type="text"
                     value={task}
                     placeholder="New task..."
                     onChange={e => setTask(e.target.value)}
                     required
                 />
-                <button>
-                    Add
-                </button>
+                <ButtonAdd>
+                    +
+                </ButtonAdd>
             </form>
         </>
     );
