@@ -1,16 +1,21 @@
 import styled from 'styled-components';
+import { COLORS } from '../../styles/style';
 
 export const Input = styled.input`
     width: 70%;
     height: 70px;
     margin-bottom: 30px;
-    color: #FFF7F5;
+    color: ${COLORS.textColor}; 
     padding: 10px;
     font-size: 2em;
     border-radius: 20px;
-    background: #3B4253;
+    background: ${COLORS.tertiary};
     border: none;
     outline: none;
+
+    & ::placeholder{
+        color: #FFF7F5;
+    }
 `;
 
 export const ButtonAdd = styled.button`
@@ -19,9 +24,9 @@ export const ButtonAdd = styled.button`
     margin-left: 20px;
     font-size: 2em;
     font-weight: bold;
-    background: #FE8368;
+    background: ${COLORS.buttonColor};
     border-radius: 50%;
-    color: #FFF7F5;
+    color: ${COLORS.textColor};
     cursor: pointer;
     border: none;
     outline: none;

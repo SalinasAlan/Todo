@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { COLORS } from '../style';
 
 export const Container = styled.div`
     width: 50%;
@@ -6,9 +7,9 @@ export const Container = styled.div`
     margin: auto;
     padding: 30px;
     border-radius: 30px;
-    color: #FFF7F5;
-    background: #262E41;
-`; 
+    color: ${COLORS.textColor};
+    background: ${COLORS.secondary};
+`;
 
 export const ListContainer = styled.div`
     width: 100%;
