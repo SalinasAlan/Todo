@@ -7,6 +7,7 @@ export const COLORS = {
 }
 
 export const QUERIES = {
+    extraSmall: `max-width: 400px`,
     small: `max-width: 767px`,
     medium: `max-width: 1023px`,
 }
