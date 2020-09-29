@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLORS } from '../../styles/style';
+import { COLORS, QUERIES } from '../../styles/style';
 
 export const Input = styled.input`
     width: 70%;
@@ -16,6 +16,17 @@ export const Input = styled.input`
     & ::placeholder{
         color: #FFF7F5;
     }
+
+    @media only screen and (${QUERIES.small}) {
+        height: 60px;
+        font-size: 1.75em;
+    }
+
+    @media only screen and (${QUERIES.extraSmall}) {
+        height: 50px;
+        font-size: 1.5em;
+    }
+
 `;
 
 export const ButtonAdd = styled.button`
@@ -30,4 +41,9 @@ export const ButtonAdd = styled.button`
     cursor: pointer;
     border: none;
     outline: none;
+    
+    @media only screen and (${QUERIES.extraSmall}) {
+        width: 40px;
+        height: 40px;
+    }
 `;
