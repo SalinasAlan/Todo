@@ -54,3 +54,7 @@ export const HomeContainer = styled.div`
         /* padding: 15px;    */
     }
 `;
+
+export const FormContainer = styled.div`
+    margin-bottom: 20px;
+`;
