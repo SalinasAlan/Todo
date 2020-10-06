@@ -31,3 +31,26 @@ export const Container = styled.div`
 export const ListContainer = styled.div`
     width: 100%;
 `;
+
+export const HomeContainer = styled.div`
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+    color: ${COLORS.textColor};
+    background: ${COLORS.secondary};
+
+
+    @media only screen and (${QUERIES.medium}) {
+        
+    }
+
+    @media only screen and (${QUERIES.small}) {
+        /* padding: 20px; */
+    }
+
+    @media only screen and (${QUERIES.extraSmall}) {
+        /* padding: 15px;    */
+    }
+`;
