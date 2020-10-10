@@ -55,7 +55,7 @@ const SignUp = () => {
                 <br />
                 <input type="password" placeholder="password" name="password" />
                 <br />
-                <p style={{ color: "red", margin: "0px" }}>{error}</p>
+                <p style={{ color: "#FF4832", margin: "0px" }}>{error}</p>
                 <button type="submit">
                     SignUp
                 </button>
