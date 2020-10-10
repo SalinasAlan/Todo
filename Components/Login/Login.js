@@ -1,10 +1,11 @@
 import app from '../../firebase';
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import { useRouter } from 'next/router';
 import { FormContainer } from '../../styles/Containers/Container';
 
 const Login = () => {
 
+    const [error, setError] = useState();
     const router = useRouter();
 
     const handleLogin = useCallback(
@@ -18,7 +19,7 @@ const Login = () => {
 
                 router.push('/todo');
             } catch (error) {
-                console.log(error.message);
+                setError(error.message);
             }
         }
     );
@@ -31,6 +32,7 @@ const Login = () => {
                 <br />
                 <input type="password" placeholder="password" name="password" />
                 <br />
+                <p style={{ color: "#FF4832", margin: "0px" }}>{error}</p>
                 <button type="submit">
                     Login
                 </button>
