@@ -1,6 +1,7 @@
 import app from '../../firebase';
 import { useCallback, useState } from 'react';
 import { useRouter } from 'next/router';
+import { FormContainer } from '../../styles/Containers/Container';
 
 const SignUp = () => {
 
@@ -23,7 +24,7 @@ const SignUp = () => {
                             name: name.value,
                             email: email.value,
                         };
-                        
+
                         const userCollection = app
                             .firestore()
                             .collection('users');
@@ -46,21 +47,21 @@ const SignUp = () => {
     );
 
     return (
-        <>
+        <FormContainer>
             <h3>SignUp</h3>
             <form onSubmit={handleSignUp}>
                 <input type="text" placeholder="Name" name="name" />
                 <br />
                 <input type="email" placeholder="Email" name="email" />
                 <br />
-                <input type="password" placeholder="password" name="password" />
+                <input type="password" placeholder="Password" name="password" />
                 <br />
                 <p style={{ color: "#FF4832", margin: "0px" }}>{error}</p>
                 <button type="submit">
                     SignUp
                 </button>
             </form>
-        </>
+        </FormContainer>
     );
 }
 
