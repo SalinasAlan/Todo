@@ -3,6 +3,7 @@ export const COLORS = {
     secondary: '#262E41',
     tertiary: '#3B4253',
     textColor: '#FFF7F5',
+    nameTextColor: '#B9FFBD',
     buttonColor: '#FE8368'
 }
 
