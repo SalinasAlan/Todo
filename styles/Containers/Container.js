@@ -9,6 +9,7 @@ export const Container = styled.div`
     border-radius: 30px;
     color: ${COLORS.textColor};
     background: ${COLORS.secondary};
+    overflow-y: auto;
 
 
     @media only screen and (${QUERIES.medium}) {
@@ -57,4 +58,8 @@ export const HomeContainer = styled.div`
 
 export const FormContainer = styled.div`
     margin-bottom: 20px;
+`;
+
+export const HiddenTasksContainer = styled.div`
+    display: ${props => props.show ? "block" : "none"};
 `;
