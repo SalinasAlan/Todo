@@ -23,7 +23,7 @@ export default function Home() {
                         :
                         <Login />
                 }
-                <Message onClick={ _ => setChangeForm(!changeForm)}>
+                <Message onClick={_ => setChangeForm(!changeForm)}>
                     {
                         changeForm ?
                             "Login here"
@@ -31,6 +31,11 @@ export default function Home() {
                             "Create an account here"
                     }
                 </Message>
+                <div style={{ "color": "#287299" }}>
+                    <h4 style={{ "margin": "100px 0 0 0" }} > If you want to try it please enter</h4>
+                    <p style={{ "margin": "0" }}>Email: test@test.com</p>
+                    <p style={{ "margin": "0" }}>Password: Test1@</p>
+                </div>
             </HomeContainer>
         </Layout>
     )
