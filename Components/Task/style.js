@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { QUERIES, COLORS } from '../../styles/style';
 
-export const Checbox = styled.input`
+export const Checkbox = styled.input`
     background-color: transparent;
     cursor: pointer;
     background: #9CE3B4;

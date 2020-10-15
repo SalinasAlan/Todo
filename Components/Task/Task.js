@@ -1,7 +1,7 @@
 import { useTasks } from '../../Context/Todo';
-import { TaskContainer ,Checbox, TaskText, TaskWrapper, Button } from './style';
+import { TaskContainer, Checkbox, TaskText, TaskWrapper, Button } from './style';
 
-const Task = ({ id, task, complete }) => {
+const Task = ({ id, task, completed, checked }) => {
     const { setStatusTask, handleDeteleTask } = useTasks();
 
     const handleCompleted = e => {
@@ -15,8 +15,8 @@ const Task = ({ id, task, complete }) => {
     return (
         <TaskContainer>
             <TaskWrapper>
-                <Checbox type="checkbox" onChange={handleCompleted} />
-                <TaskText>{task}</TaskText>
+                <Checkbox type="checkbox" onChange={handleCompleted} checked={checked} />
+                <TaskText complete={completed}>{task}</TaskText>
             </TaskWrapper>
             <Button onClick={handleDeleted}>Delete</Button>
             <br />
