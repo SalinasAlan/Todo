@@ -1,12 +1,21 @@
 import app from '../../firebase';
-import { useCallback, useState } from 'react';
+import { useCallback, useState, useEffect, useContext } from 'react';
 import { useRouter } from 'next/router';
 import { FormContainer } from '../../styles/Containers/Container';
+import { AuthContext } from '../../Context/Auth';
 
 const Login = () => {
 
     const [error, setError] = useState();
     const router = useRouter();
+
+    const { currentUser, setUserId } = useContext(AuthContext);
+
+    useEffect(() => {
+        if (currentUser) {
+            router.push('/todo');
+        }
+    }, [currentUser])
 
     const handleLogin = useCallback(
         async e => {
@@ -15,7 +24,10 @@ const Login = () => {
             try {
                 await app
                     .auth()
-                    .signInWithEmailAndPassword(email.value, password.value);
+                    .signInWithEmailAndPassword(email.value, password.value)
+                    .then(response => {
+                        sessionStorage.setItem('id', `${response.user.uid}`);
+                    });
 
                 router.push('/todo');
             } catch (error) {
