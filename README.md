@@ -16,7 +16,7 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 ## My process
 
-You can read in [here](https://alansalinasdls.com/projects/todo) 
+You can read it [here](https://alansalinasdls.com/projects/todo) 
 
 ## Deploy on Vercel
 
